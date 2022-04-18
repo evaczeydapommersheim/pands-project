@@ -12,7 +12,7 @@
 > The Iris dataset is one of the first historical datasets used for multivariate data analysis.
 > The dataset consists of 50 samples of 3 different types of the Iris flower (Iris-setosa, Iris-Versicolour and Iris-Virginica). Each sample is described based on 4 features (sepal length, sepal width, petal length and petal width), all four features measured in cm-s.
 > The dataset has been analyzed by multiple papers. It is a simple enough dataset which can be and is commonly used to understand concepts of data analytics and machine learning, determining similarities and differences between the 3 flower species and using the data for prediction, modelling purposes. The data can be presented in various ways to allow conclusions to be drawn using the variables/features and use the outcomes to reflect on the 3 species/classification of the Iris flower.
-[![The three Iris flower species](/https://miro.medium.com/max/1400/1*uo6VfVH87jRjMZWVdwq3Vw.png)]
+[![Three species of the Iris flower](/C:\Users\Dancsa\Desktop\GMIT_PANDS2022\pands-project\Three species of the Iris flower.png)]
 
 2. Determine what code/python library can be used to analyze the dataset
     a. Research sklearn for machine learning
