@@ -71,25 +71,25 @@ print("\nThere is correlation between certain variables:\n", correlation)
 g = sns.relplot(x=iris_data["Sepal_Length"],y=iris_data["Sepal_Width"],
 kind="scatter", hue=iris_data["Species"])
 g.set(xlabel="Sepal Length", ylabel="Sepal Width")
-plt.title('Iris Data Scatter Plot 1', color = 'blue', size = 20)
+plt.title('Iris Data Scatter Plot 1', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot1.png')
 
 g = sns.relplot(x=iris_data["Sepal_Length"],y=iris_data["Petal_Length"],
 kind="scatter", hue=iris_data["Species"])
 g.set(xlabel="Sepal Length", ylabel="Petal Length")
-plt.title('Iris Data Scatter Plot 2', color = 'blue', size = 20)
+plt.title('Iris Data Scatter Plot 2', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot2.png')
 
 g = sns.relplot(x=iris_data["Petal_Length"],y=iris_data["Petal_Width"],
 kind="scatter", hue=iris_data["Species"])
 g.set(xlabel="Petal Length", ylabel="Petal Width")
-plt.title('Iris Data Scatter Plot 3', color = 'blue', size = 20)
+plt.title('Iris Data Scatter Plot 3', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot3.png')
 
 g = sns.relplot(x=iris_data["Petal_Width"],y=iris_data["Sepal_Width"],
 kind="scatter", hue=iris_data["Species"])
 g.set(xlabel="Petal Width", ylabel="Sepal Width")
-plt.title('Iris Data Scatter Plot 4', color = 'blue', size = 20)
+plt.title('Iris Data Scatter Plot 4', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot4.png')
 
 
