@@ -21,6 +21,8 @@ import pandas as pd
 # Added column headers in notepad to inlcude in csv file
 iris_data = pd.read_csv('iris.data')
 
+
+
 # Step 2 - Print the first 5 lines of the dataset to get a visual of the pandas dataset 
 iris_data_structure = iris_data.head()
 print("\nThe structure of the dataset is the following:\n", iris_data_structure,"\n")

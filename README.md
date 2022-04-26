@@ -44,7 +44,16 @@ NumPy was created in 2005 by Travis Oliphant. It is an open source project and y
 NumPy stands for Numerical Python. Ref [What is NumPy](https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=NumPy%20is%20a%20Python%20library,you%20can%20use%20it%20freely.)
   
 2. IMPORTING THE IRIS DATASET<br>
+The dataset was downloaded from Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) as iris.data file. This file is with a .data extension which is commonly used for storeing datasets. Python's Pandas library command read_csv provides a solution to convert read this file as a CSV (Comma separated file).<br>
+When reading the file in its original version it was noted that the columns have no headers/names.
+Based on the attribute data as per names.data file also available @ Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) a list [cols] was created and added to the file under a new dataframe called iris2.
+<img src="Import_Head_Dataset.PNG" width = "500">
+
 3. ANALYZING THE DATASET<br>
+
+Summary.txt file available in this repository contains a detailed review of the dataframe itself using generic commands available in the python Pandas package which provides with numerous ways to interpret and differentiate between the four features as well as the three species of the flower. Ref [Write command line output to a file] <br>
+It can be concluded that the Sepal dimensions are almost double to the Petal dimensions in general. This is most visible in the case of the Iris_setosa species. Thi species clearly stands out and can be separated from the other two species when comparing the attributes.<br>
+The values of the mean and median are slightly different which suggests that the distribution of the individual attribute variables may not be normal and/or have outliers present in the data obeserved.<br>
 4. VISUALIZATION<br>
 5. CONCLUSIONS<br>
 6. LIST OF FILES in REPOSITORY
@@ -60,8 +69,10 @@ NumPy stands for Numerical Python. Ref [What is NumPy](https://www.w3schools.com
 - Matplotlib:Visualization with Python[https://matplotlib.org/]
 - An Introduction to seaborn[https://seaborn.pydata.org/introduction.html]
 - What is NumPy[https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=NumPy%20is%20a%20Python%20library,you%20can%20use%20it%20freely.]
+- UCI Machine Learning Repository [https://archive.ics.uci.edu/ml/datasets/iris]
 - <https://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/>
 - <https://www.youtube.com/watch?v=HXi9cl5Aq5w>
 - <https://www.youtube.com/watch?v=02BFXhPQWHQ>
 - <https://www.youtube.com/watch?v=pTjsr_0YWas>
 - <https://www.techwalla.com/articles/how-to-make-a-header-row-in-a-csv-file>
+- Write command line output to a file [https://stackoverflow.com/questions/9003522/writing-command-line-output-to-file#:~:text=After%20that%20you%20can%20simple,functions%3A%20File%20IO%20in%20python.&text=is%20not%20useful-,Show%20activity%20on%20this%20post.,writing%2C%20and%20a%20for%20appending].
