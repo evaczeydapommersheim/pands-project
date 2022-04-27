@@ -51,10 +51,14 @@ Based on the attribute data as per names.data file also available @ Ref [UCI Mac
 
 3. ANALYZING THE DATASET<br>
 
-Summary.txt file available in this repository contains a detailed review of the dataframe itself using generic commands available in the python Pandas package which provides with numerous ways to interpret and differentiate between the four features as well as the three species of the flower. Ref [Write command line output to a file] <br>
-It can be concluded that the Sepal dimensions are almost double to the Petal dimensions in general. This is most visible in the case of the Iris_setosa species. Thi species clearly stands out and can be separated from the other two species when comparing the attributes.<br>
+Summary.txt file available in this repository contains a detailed review of the dataframe itself using generic commands available in the python Pandas package which provides with numerous ways to interpret and differentiate between the four features as well as the three species of the flower.<br>
+It can be concluded that the Sepal dimensions are almost double to the Petal dimensions in general. This is most visible in the case of the Iris_setosa species. This species clearly stands out and can be separated from the other two species when comparing the attributes.<br>
 The values of the mean and median are slightly different which suggests that the distribution of the individual attribute variables may not be normal and/or have outliers present in the data obeserved.<br>
+Ref [Write command line output to a file](https://stackoverflow.com/questions/9003522/writing-command-line-output-to-file#:~:text=After%20that%20you%20can%20simple,functions%3A%20File%20IO%20in%20python.&text=is%20not%20useful-,Show%20activity%20on%20this%20post.,writing%2C%20and%20a%20for%20appending)
+
 4. VISUALIZATION<br>
+
+
 5. CONCLUSIONS<br>
 6. LIST OF FILES in REPOSITORY
 
