@@ -58,8 +58,35 @@ Ref [Write command line output to a file](https://stackoverflow.com/questions/90
 
 4. VISUALIZATION<br>
 
+A lot of the data included in [summary.txt](/pands-project/summary.txt) can be represented ina graphical way also. Python libraries utilized in this visualization attempt were Matplotlib and Seaborn. Seaborn is built upon Matplotlib but is widely used for representing data is a highly efficient manner. The approach followed in this project the following.<br>
+Historgrams were used to plot each variable:Sepal Length, Sepal Width, Petal Length and Petal width. Histograms proide information about the distribution of the datapoints for each feature. Pictures of each histogram can be found in this Github Folder.<br>
+
+<img src="Hist_petal_length.png" width="300">
+<img src="Hist_petal_width.png" width="300"><br>
+<img src="Hist_sepal_length.png" width="300">
+<img src="Hist_sepal_width.png" width="300">
+
+The plots for each feature allow to determine the dimensions of each feature and the most frequent values, but as some of the data do not prove to be following a normal distribution it is not easy to determine the mean values for each feature. In addition the historgrams in this case do not provide a breakdown of the species which are included together one the graph of each feature.<br>
+
+Although individual scatter plots were also generated to examine the ditribution of the datapoints by differentiating between the different species of the flowers. The PairGrid option in Seaborn allowed a more efficient presentation of all datapoints on scatterplots as well as distribution plots (Histograms).
+
+<img src="IrisDataScatterPlot1.png" width="300">
+<img src="IrisDataScatterPlot2.png" width="300"><br>
+<img src="IrisDataScatterPlot3.png" width="300">
+<img src="IrisDataScatterPlot4.png" width="300">
+
+<img src="Iris_Features_PairPlot.png" width="400">
+
+On these graphs it becomes evident that the Iris Setosa datapoints are isolated compared to the other two species. Both petal length and petal width show significantly smaller compared to Iris Versicolor and Iris Virginica. On this pairgrid additional insight is gained to the histograms (diagonal plots for each feature). The red colour for Iris Setosa is mos frequent in the lower range of values for all features except for Sepal Width where it seems have a spread of values, the majority of which are in the higher value range.
+
+Finally, correlation was also assessed as it may be used for prediction purposes. A heatmap was prepared to visualize the correlation values already detailed in the summary.txt file.<br>
+
+<img src="Iris_Heatmap.png" width="300">
+
+The scale on the right hand side of the heatmap indicates the colour scale of the correlation value, the closer it is to 1 the stronger the correlation between the features. Sepal width clearly shows no correlation with any of the other features. This heatmap would need to be further developed in order to understand the true correlation between features by flower species.
 
 5. CONCLUSIONS<br>
+
 6. LIST OF FILES in REPOSITORY
 
 ### *__III. REFERENCES:__*

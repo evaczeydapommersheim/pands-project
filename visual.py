@@ -26,15 +26,6 @@ cols = ['Sepal Length', 'Sepal Width','Petal Length','Petal Width', 'Species']
 iris2 = pd.read_csv('iris_ds.data', sep=',', names = cols)
 print("The dataframe now includes the column names: \n",iris2)
 
-# Group the attribute variables into one dataframe
-#  Use of iloc[] to identify the rows and columns required to break into a sub dataframe
-features = iris2.iloc[:,:-1] 
-species = iris2.iloc[:,-1]
-# print(features.head())
-# print(type(features))
-# print (species.head())
-# print(type(species))
-
 # Print and save histogram plots for each attribute variable
 plt.hist(iris2["Sepal Length"])
 plt.xlabel("cm")
@@ -69,7 +60,7 @@ plt.close()
 sns.set_context("notebook")
 custom_palette=["red","green","purple"]
 sns.set_palette(custom_palette)
-g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Sepal Length", y="Sepal Width")
+g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Sepal Length", y="Sepal Width", height=5)
 g.set(xlabel="Sepal Length", ylabel="Sepal Width") 
 plt.title('Iris Data Scatter Plot 1', color = 'black', size = 15)
 plt.savefig('IrisDataScatterPlot1.png')
@@ -101,4 +92,40 @@ g.set(xlabel="Petal Length", ylabel="Petal Width")
 plt.title('Iris Data Scatter Plot 4', color = 'black', size = 15)
 plt.savefig('IrisDataScatterPlot4.png')
 plt.close()
+
+# Create a matrix of plot using Seaborn PairGrid solution
+# Provides a faster and comprehensive summary of the individual pair plots
+# Helps understanding that data through clear visualization
+
+# This is to separate the attribute variables into a list
+variables = ['Sepal Length', 'Sepal Width','Petal Length','Petal Width']
+# Use of Pairgrid setting diagonal plots to be histograms which will provide a distribution plot of each variable
+# Chose scatterplot to plot each individual data by the species of the flower
+g = sns.PairGrid(data=iris2, hue = "Species", vars = variables, height=5, aspect=5/5)
+g.map_diag(sns.histplot)
+g.map_offdiag(sns.scatterplot)
+g.add_legend()
+g.fig.suptitle
+plt.title("Iris Data PairGrid Plot")
+plt.savefig('Iris_Features_PairPlot.png')
+plt.close()
+
+# Boxplot presentation of individual species, it allows
+# to draw comparison at a very high level between the flowers, but would need to be further broken down 
+# to be able to use the visualized data for prediction purposes
+g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[2])
+plt.title("Iris Boxplot by Species", c="Blue", size=15)
+plt.savefig('Iris_Boxplot_by_Species.png')
+plt.close()
+
+# The heatmap is very useful when trying to establish correlation between variables. 
+
+sns.heatmap(iris2.corr(), annot=True, cmap="Purples")
+plt.title("Iris Attributes - Heatmap", c="Blue", size=15)
+plt.savefig('Iris_Heatmap.png')
+plt.close()
+
+
+
+
 
