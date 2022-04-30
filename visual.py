@@ -62,7 +62,7 @@ custom_palette=["red","green","purple"]
 sns.set_palette(custom_palette)
 g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Sepal Length", y="Sepal Width", height=5)
 g.set(xlabel="Sepal Length", ylabel="Sepal Width") 
-plt.title('Iris Data Scatter Plot 1', color = 'black', size = 15)
+plt.title('Iris Data Scatter Plot 1', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot1.png')
 plt.close()
 
@@ -71,7 +71,7 @@ custom_palette=["red","green","purple"]
 sns.set_palette(custom_palette)
 g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Sepal Length", y="Petal Length")
 g.set(xlabel="Sepal Length", ylabel="Petal Length")
-plt.title('Iris Data Scatter Plot 2', color = 'black', size = 15)
+plt.title('Iris Data Scatter Plot 2', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot2.png')
 plt.close()
 
@@ -80,7 +80,7 @@ custom_palette=["red","green","purple"]
 sns.set_palette(custom_palette)
 g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Sepal Length", y="Petal Width")
 g.set(xlabel="Sepal Length", ylabel="Petal Width")
-plt.title('Iris Data Scatter Plot 3', color = 'black', size = 15)
+plt.title('Iris Data Scatter Plot 3', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot3.png')
 plt.close()
 
@@ -89,7 +89,7 @@ custom_palette=["red","green","purple"]
 sns.set_palette(custom_palette)
 g=sns.relplot(data=iris2, kind="scatter", hue="Species", x="Petal Length", y="Petal Width")
 g.set(xlabel="Petal Length", ylabel="Petal Width")
-plt.title('Iris Data Scatter Plot 4', color = 'black', size = 15)
+plt.title('Iris Data Scatter Plot 4', color = 'blue', size = 10)
 plt.savefig('IrisDataScatterPlot4.png')
 plt.close()
 
@@ -113,11 +113,25 @@ plt.close()
 # Boxplot presentation of individual species, it allows
 # to draw comparison at a very high level between the flowers, but would need to be further broken down 
 # to be able to use the visualized data for prediction purposes
-g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[2])
-plt.title("Iris Boxplot by Species", c="Blue", size=15)
-plt.savefig('Iris_Boxplot_by_Species.png')
+g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[0])
+plt.title("Iris Boxplot 1", c="Blue", size=10)
+plt.savefig('Iris_BP_by_Species1.png')
 plt.close()
 
+g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[1])
+plt.title("Iris Boxplot 2", c="Blue", size=10)
+plt.savefig('Iris_BP_by_Species2.png')
+plt.close()
+
+g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[2])
+plt.title("Iris Boxplot 3", c="Blue", size=10)
+plt.savefig('Iris_BP_by_Species3.png')
+plt.close()
+
+g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[3])
+plt.title("Iris Boxplot 4", c="Blue", size=10)
+plt.savefig('Iris_BP_by_Species4.png')
+plt.close()
 # The heatmap is very useful when trying to establish correlation between variables. 
 
 sns.heatmap(iris2.corr(), annot=True, cmap="Purples")

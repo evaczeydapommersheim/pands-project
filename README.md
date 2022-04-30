@@ -58,17 +58,17 @@ Ref [Write command line output to a file](https://stackoverflow.com/questions/90
 
 4. VISUALIZATION<br>
 
-A lot of the data included in [summary.txt](/pands-project/summary.txt) can be represented ina graphical way also. Python libraries utilized in this visualization attempt were Matplotlib and Seaborn. Seaborn is built upon Matplotlib but is widely used for representing data is a highly efficient manner. The approach followed in this project the following.<br>
-Historgrams were used to plot each variable:Sepal Length, Sepal Width, Petal Length and Petal width. Histograms proide information about the distribution of the datapoints for each feature. Pictures of each histogram can be found in this Github Folder.<br>
+A lot of the data included in [summary.txt](/pands-project/summary.txt) can be represented in a graphical way also. Python libraries utilized in this visualization attempt were Matplotlib and Seaborn. Seaborn is built upon Matplotlib and is widely used for representing data in a highly efficient manner. The approach followed in this project is included and detailed in the file [visual.py](/pands-project/visual.py).<br>
+Historgrams were used to plot each variable (feature): Sepal Length, Sepal Width, Petal Length and Petal width. Histograms provide information about the distribution of the datapoints for each feature. Pictures of each histogram can be found in this Github Folder.<br>
 
 <img src="Hist_petal_length.png" width="300">
 <img src="Hist_petal_width.png" width="300"><br>
 <img src="Hist_sepal_length.png" width="300">
 <img src="Hist_sepal_width.png" width="300">
 
-The plots for each feature allow to determine the dimensions of each feature and the most frequent values, but as some of the data do not prove to be following a normal distribution it is not easy to determine the mean values for each feature. In addition the historgrams in this case do not provide a breakdown of the species which are included together one the graph of each feature.<br>
+The plots  allow to determine the dimensions of each feature and the most frequent values they occure with, but as some of the data do not prove to be following a normal distribution it is not easy to determine the mean values or the standard deviation for each feature. In addition, the historgrams do not provide a breakdown of the species which they incorporate on the graph of each feature.<br>
 
-Although individual scatter plots were also generated to examine the ditribution of the datapoints by differentiating between the different species of the flowers. The PairGrid option in Seaborn allowed a more efficient presentation of all datapoints on scatterplots as well as distribution plots (Histograms).
+Although individual scatter plots were also generated to examine the distribution of the datapoints by differentiating between the species of the flowers. The PairGrid option in Seaborn allowed a more efficient presentation of all datapoints on scatterplots as well as distribution plots (Histograms) diagonally.
 
 <img src="IrisDataScatterPlot1.png" width="300">
 <img src="IrisDataScatterPlot2.png" width="300"><br>
@@ -77,7 +77,14 @@ Although individual scatter plots were also generated to examine the ditribution
 
 <img src="Iris_Features_PairPlot.png" width="400">
 
-On these graphs it becomes evident that the Iris Setosa datapoints are isolated compared to the other two species. Both petal length and petal width show significantly smaller compared to Iris Versicolor and Iris Virginica. On this pairgrid additional insight is gained to the histograms (diagonal plots for each feature). The red colour for Iris Setosa is mos frequent in the lower range of values for all features except for Sepal Width where it seems have a spread of values, the majority of which are in the higher value range.
+On these graphs it becomes evident that the Iris-Setosa datapoints are isolated compared to the other two species. Both petal length and petal width show significantly smaller dimensions compared to Iris-Versicolor and Iris-Virginica. On this pairgrid additional insight is gained to the histograms (diagonal plots for each feature). The red colour for Iris Setosa is  frequent in the lower range of values for all features except for Sepal Width where it seems have a spread of values, the majority of which are in the higher value range.
+
+Box plots present a more complex way to visualize data and consequently can tell more information about each feature and flower species. Boxplots detail the minimum and maximum values of the datapoints in each distribution, the 25th, 50th (Median) and 75th percentile and also give indication about any outliers in the distribution.
+
+<img src="Iris_BP_by_Species1.png" width="300"> <img src="Iris_BP_by_Species2.png" width="300"><br>
+<img src="Iris_BP_by_Species3.png" width="300"> <img src="Iris_BP_by_Species4.png" width="300">
+
+On review of the boxplots for each feature by flower species, it becomes evident that based on the petal dimensions it would be very easy to conclude if a flower is Iris Setosa, based on its petal dimensions. On the other hand, it would prove more difficult to differentiate between Iris-Versicolor and Iris-Virginica based on the petal length values.<br>
 
 Finally, correlation was also assessed as it may be used for prediction purposes. A heatmap was prepared to visualize the correlation values already detailed in the summary.txt file.<br>
 
@@ -87,7 +94,34 @@ The scale on the right hand side of the heatmap indicates the colour scale of th
 
 5. CONCLUSIONS<br>
 
+This dataset developed and discussed in R.A Fisher's paper is a simple dataseet but is commonly used for learning purposes to understand the concepts of data analytics. It is also used as good example for machine learning purposes. It can be freely downloaded from the internet and also is part of the in built datasets in SKlearn and in Seaborn Libraries.
+This dataset would have been studied by numerous people for various academic purposes, and to practice coding in data analytics, amongst many other.<br>
+
+Using the graphical representation of the data in section 4 conclusion can be drawn that Iris-Setosa has significantly smaller petal dimensions. If data was to be used to determine the species of a newly found flower the boxplots clearly determine that if the petal length of the flower is below 2 cm, or if the value of petal width is below 1 cm we can be certain that it is an Iris-Setosa. When using the median values for the same features, it could also be determined with high enough confidence level, if the flower is an Iris-Versicolor or an Iris-Virginica. The sepal dimensions however are not that straight forward and further tools would need to be utilized such as the k-nearest neighbour algorith used in Machine Learning to be able to make more reliable predictions over the classification of future flowers.<br>
+
 6. LIST OF FILES in REPOSITORY
+
+- [analysis.py](/pands-project/analysis.py)
+- [visual.py](/pands-project/visual.py)
+- [Hist_petal_length.png](/pands-project/Hist_petal_length.png)
+- [Hist_petal_width.png](/pands-project/Hist_petal_width.png)
+- [Hist_sepal_length.png](/pands-project/Hist_sepal_length.png)
+- [Hist_sepal_width.png](/pands-project/Hist_sepal_width.png)
+- [IrisDataScatterPlot1.png](/pands-project/IrisDataScatterPlot1.png)
+- [IrisDataScatterPlot2.png](/pands-project/IrisDataScatterPlot2.png)
+- [IrisDataScatterPlot3.png](/pands-project/IrisDataScatterPlot3.png)
+- [IrisDataScatterPlot4.png](/pands-project/IrisDataScatterPlot4.png)
+- [Iris_Features_PairPlot.png](/pands-project/Iris_Features_PairPlot.png)
+- [Iris_BP_by_Species1.png](/pands-project/Iris_BP_by_Species1.png)
+- [Iris_BP_by_Species2.png](/pands-project/Iris_BP_by_Species2.png)
+- [Iris_BP_by_Species3.png](/pands-project/Iris_BP_by_Species3.png)
+- [Iris_BP_by_Species4.png](/pands-project/Iris_BP_by_Species4.png)
+- [Iris_Heatmap.png](/pands-project/Iris_Heatmap.png)
+- [Images_irisflower.png](/pands-project/Images_irisflower.png)
+- [iris_ds.data](/pands-project/iris_ds.data)
+- [iris2.csv](/pands-project/iris2.csv)
+- [summary.txt](/pands-project/summary.txt)
+- [README.md]
 
 ### *__III. REFERENCES:__*
 
