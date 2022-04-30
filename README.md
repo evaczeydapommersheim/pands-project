@@ -61,19 +61,18 @@ Ref [Write command line output to a file](https://stackoverflow.com/questions/90
 A lot of the data included in [summary.txt](/pands-project/summary.txt) can be represented in a graphical way also. Python libraries utilized in this visualization attempt were Matplotlib and Seaborn. Seaborn is built upon Matplotlib and is widely used for representing data in a highly efficient manner. The approach followed in this project is included and detailed in the file [visual.py](/pands-project/visual.py).<br>
 Historgrams were used to plot each variable (feature): Sepal Length, Sepal Width, Petal Length and Petal width. Histograms provide information about the distribution of the datapoints for each feature. Pictures of each histogram can be found in this Github Folder.<br>
 
-<img src="Hist_petal_length.png" width="300">
-<img src="Hist_petal_width.png" width="300"><br>
-<img src="Hist_sepal_length.png" width="300">
-<img src="Hist_sepal_width.png" width="300">
+<img src="Hist_petal_length.png" width="300"> <img src="Hist_petal_width.png" width="300"><br>
+
+<img src="Hist_sepal_length.png" width="300"> <img src="Hist_sepal_width.png" width="300">
 
 The plots  allow to determine the dimensions of each feature and the most frequent values they occure with, but as some of the data do not prove to be following a normal distribution it is not easy to determine the mean values or the standard deviation for each feature. In addition, the historgrams do not provide a breakdown of the species which they incorporate on the graph of each feature.<br>
 
 Although individual scatter plots were also generated to examine the distribution of the datapoints by differentiating between the species of the flowers. The PairGrid option in Seaborn allowed a more efficient presentation of all datapoints on scatterplots as well as distribution plots (Histograms) diagonally.
 
-<img src="IrisDataScatterPlot1.png" width="300">
-<img src="IrisDataScatterPlot2.png" width="300"><br>
-<img src="IrisDataScatterPlot3.png" width="300">
-<img src="IrisDataScatterPlot4.png" width="300">
+<img src="IrisDataScatterPlot1.png" width="300"> <img src="IrisDataScatterPlot2.png" width="300"><br>
+
+<img src="IrisDataScatterPlot3.png" width="300"> <img src="IrisDataScatterPlot4.png" width="300">
+
 
 <img src="Iris_Features_PairPlot.png" width="400">
 
