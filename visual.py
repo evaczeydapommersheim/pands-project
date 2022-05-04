@@ -98,10 +98,10 @@ plt.close()
 # Helps understanding that data through clear visualization
 
 # This is to separate the attribute variables into a list
-variables = ['Sepal Length', 'Sepal Width','Petal Length','Petal Width']
+features = ['Sepal Length', 'Sepal Width','Petal Length','Petal Width']
 # Use of Pairgrid setting diagonal plots to be histograms which will provide a distribution plot of each variable
 # Chose scatterplot to plot each individual data by the species of the flower
-g = sns.PairGrid(data=iris2, hue = "Species", vars = variables, height=5, aspect=5/5)
+g = sns.PairGrid(data=iris2, hue = "Species", vars = features, height=5, aspect=5/5)
 g.map_diag(sns.histplot)
 g.map_offdiag(sns.scatterplot)
 g.add_legend()
@@ -113,29 +113,41 @@ plt.close()
 # Boxplot presentation of individual species, it allows
 # to draw comparison at a very high level between the flowers, but would need to be further broken down 
 # to be able to use the visualized data for prediction purposes
-g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[0])
+g=sns.catplot(data=iris2, kind="box", x="Species",y=features[0])
 plt.title("Iris Boxplot 1", c="Blue", size=10)
+plt.xticks(size=10)
+plt.yticks(size=10)
 plt.savefig('Iris_BP_by_Species1.png')
 plt.close()
 
-g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[1])
+g=sns.catplot(data=iris2, kind="box", x="Species",y=features[1])
 plt.title("Iris Boxplot 2", c="Blue", size=10)
+plt.xticks(size=10)
+plt.yticks(size=10)
 plt.savefig('Iris_BP_by_Species2.png')
 plt.close()
 
-g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[2])
+g=sns.catplot(data=iris2, kind="box", x="Species",y=features[2])
 plt.title("Iris Boxplot 3", c="Blue", size=10)
+plt.xticks(size=10)
+plt.yticks(size=10)
 plt.savefig('Iris_BP_by_Species3.png')
 plt.close()
 
-g=sns.catplot(data=iris2, kind="box", x="Species",y=variables[3])
+g=sns.catplot(data=iris2, kind="box", x="Species",y=features[3])
 plt.title("Iris Boxplot 4", c="Blue", size=10)
+plt.xticks(size=10)
+plt.yticks(size=10)
 plt.savefig('Iris_BP_by_Species4.png')
 plt.close()
+
 # The heatmap is very useful when trying to establish correlation between variables. 
 
-sns.heatmap(iris2.corr(), annot=True, cmap="Purples")
+sns.heatmap(iris2.corr(), annot=True, cmap="Purples", linewidths=1.5, linecolor="white", xticklabels=True, yticklabels=True)
+sns.set_context("notebook", font_scale=1)
 plt.title("Iris Attributes - Heatmap", c="Blue", size=15)
+plt.xticks(size=10)
+plt.yticks(rotation=90, size=10) # rotation of ylabel test as it was not showing on the plot with the full text length
 plt.savefig('Iris_Heatmap.png')
 plt.close()
 
