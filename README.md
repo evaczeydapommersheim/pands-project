@@ -44,6 +44,7 @@ NumPy was created in 2005 by Travis Oliphant. It is an open source project and y
 NumPy stands for Numerical Python. Ref [What is NumPy](https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=NumPy%20is%20a%20Python%20library,you%20can%20use%20it%20freely.)
   
 2. IMPORTING THE IRIS DATASET<br>
+
 The dataset was downloaded from Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) as iris.data file. This file is with a .data extension which is commonly used for storeing datasets. Python's Pandas library command read_csv provides a solution to convert read this file as a CSV (Comma separated file).<br>
 When reading the file in its original version it was noted that the columns have no headers/names.
 Based on the attribute data as per names.data file also available @ Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) a list [cols] was created and added to the file under a new dataframe called iris2.<br>
@@ -88,7 +89,7 @@ Sepal dimensions have a much wider range of values across all three species. Con
 
 Finally, correlation was also assessed. Correlation is commonly used for prediction purposes. A heatmap was prepared to visualize the correlation values, which were already detailed in the summary.txt file.<br>
 
-<img src="Iris_Heatmap.png" width="300">
+<img src="Iris_Heatmap.png" width="400">
 
 The scale on the right hand side of the heatmap indicates the colour scale of the correlation value, the closer it is to the value of 1 the stronger the correlation between the features is. Sepal width clearly shows no correlation with any of the other features. There seems to be stonger correlation between Sepal length and Petal Length/Petal Width as well as Petal Length and Petal Width.
 This heatmap, however, would need to be further assessed in order to understand the true correlation between features by flower species as changes in one feature may not necesarily result in changes in the other feature. Their correlation may be related to other components that are not discussed by this dataset.<br>
