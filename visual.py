@@ -27,6 +27,37 @@ iris2 = pd.read_csv('iris_ds.data', sep=',', names = cols)
 print("The dataframe now includes the column names: \n",iris2)
 
 # Print and save histogram plots for each attribute variable
+# defining a function to do the plotting for all 4 features and outputting into a subplot
+def histplot(x):
+    
+    plt.hist(iris2[x])
+    plt.title(x, size = 14, c="Blue")   #setting the subtitles for each subplot
+    plt.xlabel("cm", size=10)           #Labelling the axis
+    plt.ylabel("Count", size=10)
+    plt.xticks(size = 10)               #Setting the text size for the axis
+    plt.yticks(size = 10)
+    plt.subplots_adjust(left=0.1,
+                    bottom=0.1, 
+                    right=0.9, 
+                    top=0.9, 
+                    wspace=0.5, 
+                    hspace=1.0)            #adjusts spacing to make the subplots more legible
+
+plt.subplot(2,2,1)                         #set the number of (rows, columns, location) of each plot Top left
+histplot("Sepal Length")
+
+plt.subplot(2,2,2)                          #Top right
+histplot("Sepal Width")
+
+plt.subplot(2,2,3)                          #Bottom left
+histplot("Petal Length")
+
+plt.subplot(2,2,4)                          #Bottom right
+histplot("Petal Width")
+plt.savefig("Histogram_by features.png")    # save output image to png file
+plt.close()                                 # Close the plotting
+
+# This solution is for indovidually plotting a histogram for each feature
 plt.hist(iris2["Sepal Length"])
 plt.xlabel("cm")
 plt.ylabel("Count")
