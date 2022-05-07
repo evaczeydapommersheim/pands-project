@@ -61,12 +61,12 @@ Summary.txt file available in this repository contains a detailed review of the 
 Execution of the df.info() function details were obtained about the dataset. There are 4 float data types (features) and 1 object type (species). There are 150 datapoints (50 for each feature across the 3 species of the Iris flower) with no null values in the dataset.<br>
 
 <p align="center">
-<img src="Iris2.info.png" width = "500">
+<img src="iris2.info.png" width = "500">
 
 The df.describe() function allows an in depth review of the mean, standrad deviation, min, max and percentile values for each feature. The datapoints for Sepal length and width show a smaller standard deviation realtive to the mean, compared to datapoints for Petal length and width. This is also reflected in the median values (50% percentile). Median values for the Petal dimensions are father away from the mean values, indicating a larger spread/distribution of the data points with potential outliers. It will also become evident when reviewing the visual presentation of the data.<br>
 
 <p align="center">
-<img src="Iris2.describe.png" width = "500">
+<img src="iris2.describe.png" width = "500">
 
 The Sepal dimensions are larger compared to the Petal dimensions in general. This is most visible in the case of the Iris_setosa species. It clearly stands out and can be separated from the other two species when comparing the attribute variables.<br>
 
@@ -125,8 +125,8 @@ The sepal dimensions however are not that straight forward and further tools wou
 
 - [analysis.py](/pands-project/analysis.py)
 - [visual.py](/pands-project/visual.py)
-- [Iris2.info.png](/pands-project/iris2.info.png)
-- [Iris2.describe.png](/pands-project/iris2.describe.png)
+- [iris2.info.png](/pands-project/iris2.info.png)
+- [iris2.describe.png](/pands-project/iris2.describe.png)
 - [Historgram_by_features.png](/pands-project/Histogram_by%20features.png)
 - [Hist_petal_length.png](/pands-project/Hist_petal_length.png)
 - [Hist_petal_width.png](/pands-project/Hist_petal_width.png)
