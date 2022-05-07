@@ -17,9 +17,11 @@ The Iris dataset is one of the first historical datasets used for multivariate d
 
 The dataset consists of 50 samples of 3 different types of the Iris flower (Iris-setosa, Iris-Versicolour and Iris-Virginica). Each sample is described based on 4 features (sepal length, sepal width, petal length and petal width), all four features measured in cm-s.
 
-The dataset has been analyzed by multiple papers. It is a simple enough dataset which can be, and is commonly used to understand concepts of data analytics and machine learning. The dataset allows to understand concepts of determining similarities and differences of certain variables, in this case the three flower species and their dimensions. Statistical analysis of the data may be used for classification, prediction, modelling purposes. The data can be presented in various ways to allow conclusions to be drawn using the variables/features and utilize the outcomes to reflect on the three species or even to predict the class of a newly discovered Iris flower.</p>
-<img src="Images_irisflower.png" width="500">
-<img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128147610000034-f03-01-9780128147610.jpg" width="300">
+The dataset has been analyzed by multiple papers. It is a simple enough dataset which can be, and is commonly used to understand concepts of data analytics and machine learning. The dataset allows to understand concepts of determining similarities and differences of certain variables, in this case the three flower species and their dimensions. Statistical analysis of the data may be used for classification, prediction, modelling purposes. The data can be presented in various ways to allow conclusions to be drawn using the variables/features and utilize the outcomes to reflect on the three species or even to predict the class of a newly discovered Iris flower.</p
+
+<p align="center">
+    <img src="Images_irisflower.png" width="600">
+    <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128147610000034-f03-01-9780128147610.jpg" width="300">
 
 II. INVESTIGATION
 
@@ -48,6 +50,8 @@ NumPy stands for Numerical Python. Ref [What is NumPy](https://www.w3schools.com
 The dataset was downloaded from Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) as iris.data file. This file is with a .data extension which is commonly used for storeing datasets. Python's Pandas library command read_csv provides a solution to convert read this file as a CSV (Comma separated file).<br>
 When reading the file in its original version it was noted that the columns have no headers/names.
 Based on the attribute data as per names.data file also available @ Ref [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) a list [cols] was created and added to the file under a new dataframe called iris2.<br>
+
+<p align="center">
 <img src="Import_Head_Dataset.PNG" width = "500">
 
 3. ANALYZING THE DATASET<br>
@@ -61,32 +65,35 @@ Ref [Write command line output to a file](https://stackoverflow.com/questions/90
 
 A lot of the data included in [summary.txt](/pands-project/summary.txt) can be represented in a graphical way also. Python libraries utilized in this visualization attempt were Matplotlib and Seaborn. Seaborn is built upon Matplotlib and is widely used for representing data in a highly efficient manner. The approach followed in this project is included and detailed in the file [visual.py](/pands-project/visual.py).<br>
 Historgrams were used to plot each variable (feature): Sepal Length, Sepal Width, Petal Length and Petal width. Histograms provide information about the distribution of the datapoints for each feature. Pictures of each histogram can be found in this Github repository.<br>
-
-<img src="Histogram_by features.png" width="300"><br>
+<p align="center">
+<img src="Histogram_by features.png" width="500"><br>
 
 The plots allow to determine the dimensions of each feature and the most frequent values they occure with, but as some of the data do not prove to be following a normal distribution it is not easy to determine the mean values or the standard deviation for each feature based on these plots. In addition, the historgrams do not provide a breakdown of the species on the individual graphs.<br>
 
 Although individual scatter plots were also generated to examine the distribution of the datapoints by differentiating between the species of the flowers. The PairGrid option in Seaborn allowed a more efficient presentation of all datapoints on scatterplots as well as distribution plots (Histograms) diagonally.
 
-<img src="IrisDataScatterPlot1.png" width="300"> <img src="IrisDataScatterPlot2.png" width="300"><br>
+<p align="center"><img src="Iris_ScatterPlot1.png" width="300"> <img src="Iris_ScatterPlot2.png" width="300"><br>
 
-<img src="IrisDataScatterPlot3.png" width="300"> <img src="IrisDataScatterPlot4.png" width="300">
+<p align="center"><img src="Iris_ScatterPlot3.png" width="300"> <img src="Iris_ScatterPlot4.png" width="300">
 
-
-<img src="Iris_Features_PairPlot.png" width="400">
+<p align="center"><img src="Iris_Features_PairPlot.png" width="600">
 
 The plots show that the Iris-Setosa datapoints are isolated compared to the other two species. Both petal length and petal width for Iris-setosa show significantly smaller dimensions compared to Iris-Versicolor and Iris-Virginica. On this pairgrid additional insight is gained to the histograms (diagonal plots for each feature). The red colour for Iris Setosa accumulates in the lower range of values for all features except for Sepal Width where it seems have a spread of values, in the higher end of the value range. The histograms also show Iris-setosa petal dimensions are isolated from the other two species and only very little overlap is present between Iris-versicolor and Iris-virginica.<br>
 
 Box plots present a more complex way to visualize data and consequently can tell more information about each feature and flower species. Boxplots detail the minimum and maximum values of the datapoints in each distribution, the 25th, 50th (Median) and 75th percentile and also give indication about any outliers in the distribution.
 
+<p align="center">
 <img src="Iris_BP_by_Species1.png" width="300"> <img src="Iris_BP_by_Species2.png" width="300"><br>
-<img src="Iris_BP_by_Species3.png" width="300"> <img src="Iris_BP_by_Species4.png" width="300">
+<img src="Iris_BP_by_Species3.png" width="300"> <img src="Iris_BP_by_Species4.png" width="300"><br>
+
+<p align="center">
+<img src="Iris_Adjacent_Boxplot.png" width="300"><br>
 
 On review of the boxplots for each feature by flower species, it is evident that based on the petal length it would be very easy to conclude if a flower is Iris Setosa. It would prove more difficult to differentiate between Iris-Versicolor and Iris-Virginica based on the petal length values as there is still some overlap across the distribution of the datapoints.<br>
 Sepal dimensions have a much wider range of values across all three species. Consequently, sepal features would not be suitable to be used for classification purposes.<br>
 
 Finally, correlation was also assessed. Correlation is commonly used for prediction purposes. A heatmap was prepared to visualize the correlation values, which were already detailed in the summary.txt file.<br>
-
+<p align="center">
 <img src="Iris_Heatmap.png" width="400">
 
 The scale on the right hand side of the heatmap indicates the colour scale of the correlation value, the closer it is to the value of 1 the stronger the correlation between the features is. Sepal width clearly shows no correlation with any of the other features. There seems to be stonger correlation between Sepal length and Petal Length/Petal Width as well as Petal Length and Petal Width.
@@ -109,15 +116,16 @@ The sepal dimensions however are not that straight forward and further tools wou
 - [Hist_petal_width.png](/pands-project/Hist_petal_width.png)
 - [Hist_sepal_length.png](/pands-project/Hist_sepal_length.png)
 - [Hist_sepal_width.png](/pands-project/Hist_sepal_width.png)
-- [IrisDataScatterPlot1.png](/pands-project/IrisDataScatterPlot1.png)
-- [IrisDataScatterPlot2.png](/pands-project/IrisDataScatterPlot2.png)
-- [IrisDataScatterPlot3.png](/pands-project/IrisDataScatterPlot3.png)
-- [IrisDataScatterPlot4.png](/pands-project/IrisDataScatterPlot4.png)
+- [Iris_ScatterPlot1.png](/pands-project\Iris_ScatterPlot1.png)
+- [Iris_ScatterPlot2.png](/pands-project\Iris_ScatterPlot2.png)
+- [Iris_ScatterPlot3.png](/pands-project\Iris_ScatterPlot3.png)
+- [Iris_ScatterPlot4.png](/pands-project\Iris_ScatterPlot4.png)
 - [Iris_Features_PairPlot.png](/pands-project/Iris_Features_PairPlot.png)
 - [Iris_BP_by_Species1.png](/pands-project/Iris_BP_by_Species1.png)
 - [Iris_BP_by_Species2.png](/pands-project/Iris_BP_by_Species2.png)
 - [Iris_BP_by_Species3.png](/pands-project/Iris_BP_by_Species3.png)
 - [Iris_BP_by_Species4.png](/pands-project/Iris_BP_by_Species4.png)
+- [Iris_Adjacent_Boxplot.png](/pands-project/Iris_Adjacent_Boxplot.png)
 - [Iris_Heatmap.png](/pands-project/Iris_Heatmap.png)
 - [Images_irisflower.png](/pands-project/Images_irisflower.png)
 - [iris_ds.data](/pands-project/iris_ds.data)
@@ -141,5 +149,11 @@ The sepal dimensions however are not that straight forward and further tools wou
 - <https://www.youtube.com/watch?v=HXi9cl5Aq5w>
 - <https://www.youtube.com/watch?v=02BFXhPQWHQ>
 - <https://www.youtube.com/watch?v=pTjsr_0YWas>
-- <https://www.techwalla.com/articles/how-to-make-a-header-row-in-a-csv-file>
+- Make a header row in csv file<https://www.techwalla.com/articles/how-to-make-a-header-row-in-a-csv-file>
 - Write command line output to a file [https://stackoverflow.com/questions/9003522/writing-command-line-output-to-file#:~:text=After%20that%20you%20can%20simple,functions%3A%20File%20IO%20in%20python.&text=is%20not%20useful-,Show%20activity%20on%20this%20post.,writing%2C%20and%20a%20for%20appending].
+- Exploratory Data Analysis on Iris Dataset, 26 Apr, 2022, GeeksforGeeks.org Available at:[https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/]
+- Centering image on ReadMe.md file [https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github]
+- [https://seaborn.pydata.org/generated/seaborn.move_legend.html?highlight=move%20legend#seaborn.move_legend]
+- [https://pandas.pydata.org/docs/reference/api/pandas.melt.html]
+- StackOverflow, Available at:[https://stackoverflow.com/questions/25068384/bbox-to-anchor-and-loc-in-matplotlib]
+- StackOverflow, Available at:[https://stackoverflow.com/questions/64192059/using-a-for-loop-to-create-three-adjacent-box-plots-for-each-of-the-numeric-vari]

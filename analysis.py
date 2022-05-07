@@ -2,6 +2,7 @@
 
 # Author Eva Czeyda-Pommersheim
 
+from multiprocessing import Value
 from statistics import stdev
 from isort import file
 from nbformat import write
