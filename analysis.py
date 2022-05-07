@@ -32,6 +32,17 @@ print("The first five rows of the dataframe are:\n", iris2.head(), "\n", file=op
 print("The last rows of the dataframe are:\n", iris2.tail(), "\n", file=open("summary.txt", "at"))
 print("Every 50th item of the dataframe are:\n:", iris2.loc[::50], "\n", file=open("summary.txt", "at"))
 
+#This method prints information about a DataFrame including the index dtype and columns
+# non-null values and memory usage.
+# [https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html]
+# this function only has a return of None and can only be printed
+# into a file if it is passed into a buffer (solution sourced from above link)
+import io
+buffer = io.StringIO()
+iris2.info(buf=buffer)
+s = buffer.getvalue()
+print("Brief overview of the dataset, type of data, column names, null values:\n", s, "\n", file=open("summary.txt", "at"))
+
 # In order to get an overview of the dataset from a statistical perspective
 # the data.describe() function can be used and will output a detailed overview of each numeric variable
 # Such as the mean and standard deviation of the sepal width and length, petal width and length
