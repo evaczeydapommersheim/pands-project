@@ -60,7 +60,13 @@ Summary.txt file available in this repository contains a detailed review of the 
 
 Execution of the df.info() function details were obtained about the dataset. There are 4 float data types (features) and 1 object type (species). There are 150 datapoints (50 for each feature across the 3 species of the Iris flower) with no null values in the dataset.<br>
 
+<p align="center">
+<img src="Iris2.info.png" width = "500">
+
 The df.describe() function allows an in depth review of the mean, standrad deviation, min, max and percentile values for each feature. The datapoints for Sepal length and width show a smaller standard deviation realtive to the mean, compared to datapoints for Petal length and width. This is also reflected in the median values (50% percentile). Median values for the Petal dimensions are father away from the mean values, indicating a larger spread/distribution of the data points with potential outliers. It will also become evident when reviewing the visual presentation of the data.<br>
+
+<p align="center">
+<img src="Iris2.describe.png" width = "500">
 
 The Sepal dimensions are larger compared to the Petal dimensions in general. This is most visible in the case of the Iris_setosa species. It clearly stands out and can be separated from the other two species when comparing the attribute variables.<br>
 
@@ -119,6 +125,8 @@ The sepal dimensions however are not that straight forward and further tools wou
 
 - [analysis.py](/pands-project/analysis.py)
 - [visual.py](/pands-project/visual.py)
+- [Iris2.info.png](/pands-project/iris2.info.png)
+- [Iris2.describe.png](/pands-project/iris2.describe.png)
 - [Historgram_by_features.png](/pands-project/Histogram_by%20features.png)
 - [Hist_petal_length.png](/pands-project/Hist_petal_length.png)
 - [Hist_petal_width.png](/pands-project/Hist_petal_width.png)
@@ -144,10 +152,10 @@ The sepal dimensions however are not that straight forward and further tools wou
 ### *__III. REFERENCES:__*
 
 - The Iris Dataset — A Little Bit of History and Biology, Available at:[https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5]
-- Wikipedia, The Iris Flower Dataset, Available at:[https://en.wikipedia.org/wiki/Iris_flower_data_set]
-- Wikipedia, Ronald Fisher, Available at:[https://en.wikipedia.org/wiki/Ronald_Fisher]
-- Science Direct - Virginica [https://www.sciencedirect.com/topics/mathematics/virginica][https://ars.els-cdn.com/content/image/3-s2.0-B9780128147610000034-f03-01-9780128147610.jpg]
-- Iris Flower Classification - Machine Learning, Available at:[https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4]
+- Wikipedia (2022), Iris Flower Dataset,From Wikipedia, the free encyclopedia, Available at:[https://en.wikipedia.org/wiki/Iris_flower_data_set]
+- Wikipedia (2022), Ronald Fisher, From Wikipedia, the free encyclopedia,  Available at:[https://en.wikipedia.org/wiki/Ronald_Fisher]
+- Science Direct (2019), Vijay Kotu, Bala Deshpande - Virginica Data Exploration, Data Science (Second Edition), 2019, Available at: [https://www.sciencedirect.com/topics/mathematics/virginica][https://ars.els-cdn.com/content/image/3-s2.0-B9780128147610000034-f03-01-9780128147610.jpg]
+- Medium@Nivitus (2020), Iris Flower Classification - Machine Learning, Available at:[https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4]
 - Pandas (2022), Panda Intro, © Copyright 2008-2022, the pandas development team, Available at:[https://www.w3schools.com/python/pandas/pandas_intro.asp]
 - Matplotlib:Visualization with Python[https://matplotlib.org/]
 - Seaborn, An Introduction to seaborn, © Copyright 2012-2021, Michael Waskom, Available at:[https://seaborn.pydata.org/introduction.html]
